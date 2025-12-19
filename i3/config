@@ -45,7 +45,7 @@ exec --no-startup-id pulseaudio --start
 
 # Flameshot Screenshot Control
 bindsym F9 exec flameshot full --region --path ~/Media
-bindsym F10 exec flameshot gui --raw | xclip -selection clipboard -t image/png
+bindsym F10 exec flameshot gui --raw | xclip -selection clipboard -t image/png -i
 
 # Brightness Control
 bindsym F5 exec brightnessctl set 5%-
