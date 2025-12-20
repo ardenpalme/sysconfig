@@ -44,7 +44,7 @@ exec --no-startup-id feh --bg-fill --randomize ~/.wallpaper/*
 exec --no-startup-id pulseaudio --start
 
 # Flameshot Screenshot Control
-bindsym F9 exec flameshot full --region --path ~/Media
+bindsym F9 exec flameshot full --region | xclip -selection clipboard -t image/png -i 
 bindsym F10 exec flameshot gui --raw | xclip -selection clipboard -t image/png -i
 
 # Brightness Control
