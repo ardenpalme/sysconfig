@@ -43,6 +43,8 @@ exec --no-startup-id feh --bg-fill --randomize ~/.wallpaper/*
 # Start Pulseaudio
 exec --no-startup-id pulseaudio --start
 
+
+
 # Flameshot Screenshot Control
 bindsym F9 exec flameshot full --region | xclip -selection clipboard -t image/png -i 
 bindsym F10 exec flameshot gui --raw | xclip -selection clipboard -t image/png -i
@@ -57,6 +59,10 @@ bindsym F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $ref
 bindsym F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym F4 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Open File Explorer
+bindsym $mod+Shift+e exec thunar
+for_window [class="Thunar"] floating enable, resize set 1800 1300, move position center
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -171,7 +177,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
