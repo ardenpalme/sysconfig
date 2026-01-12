@@ -212,3 +212,5 @@ bar {
         status_command i3status
 	font pango:monospace 9
 }
+
+bindsym $mod+Shift+x exec betterlockscreen -l dim
