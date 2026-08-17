@@ -1,0 +1,4 @@
+[terminal]
+# For Zsh
+[terminal.shell]
+program = "/bin/zsh"

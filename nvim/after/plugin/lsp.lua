@@ -1,7 +1,7 @@
 -- Mason Setup
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "pyright", "ts_ls", "r_language_server" , "texlab"},
+  ensure_installed = { "ty" },
 })
 
 -- Common keymaps

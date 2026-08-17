@@ -46,10 +46,11 @@ exec --no-startup-id pulseaudio --start
 # Start Polybar status bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# Miscellaneous Configuration
+exec_always --no-startup-id $HOME/.config/arch.sh
 
-# Flameshot Screenshot Control
-bindsym F9 exec flameshot full --region | xclip -selection clipboard -t image/png -i 
-bindsym F10 exec flameshot gui --raw | xclip -selection clipboard -t image/png -i
+bindsym --release F9 exec scrot -s ~/screen-captures/%Y-%m-%d_%H-%M-%S.png
+bindsym --release F10 exec scrot -s -e 'xclip -selection clipboard -t image/png -i $f && rm $f'
 
 # Brightness Control
 bindsym F5 exec brightnessctl set 5%-

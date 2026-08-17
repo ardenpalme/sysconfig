@@ -13,12 +13,14 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	use {
-		"folke/tokyonight.nvim",
-		config = function()
-			vim.cmd("colorscheme tokyonight-night")
-		end
-	}
+  use {
+    "folke/tokyonight.nvim",
+    config = function()
+      vim.cmd("colorscheme tokyonight-night")
+    end
+  }
+
+--  use { "catppuccin/nvim", as = "catppuccin" }
 
 	use {'ThePrimeagen/harpoon'}
 	use {'mbbill/undotree'}
